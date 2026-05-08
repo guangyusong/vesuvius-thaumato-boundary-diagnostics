@@ -1,0 +1,157 @@
+{
+  "adapter_contract": {
+    "fields_not_copied": [
+      "surface names",
+      "surface paths",
+      "merge_json path",
+      "output directory",
+      "obj_out path",
+      "coordinates",
+      "meshes",
+      "tifxyz payloads"
+    ],
+    "input_fields_consumed": [
+      "surfaces[].valid",
+      "edges[].best_threshold",
+      "edges[].best_score",
+      "edges[].anchor_count",
+      "edges[].anchor_bin_size",
+      "edges[].ransac_inliers",
+      "edges[].ransac_total",
+      "edges[].ransac_thresh",
+      "edges[].ransac_sigma_in",
+      "edges[].pair_scale",
+      "edges[].real_overlap_A",
+      "edges[].real_overlap_B",
+      "strip_count"
+    ],
+    "input_source": "vc_merge_tifxyz summary.json",
+    "non_claims": [
+      "no overlap metadata writing",
+      "no surface names or paths in adapter output",
+      "no coordinates or geometry payloads",
+      "no OBJ, tifxyz, or raster output",
+      "no predictions, ink, letters, or title",
+      "no automatic VC3D code mutation"
+    ],
+    "output_fields": [
+      "edge_index",
+      "review_bucket",
+      "failure_reasons",
+      "anchor_count",
+      "ransac_inlier_fraction",
+      "pair_scale_delta",
+      "real_overlap_min",
+      "overlap_metadata_action"
+    ],
+    "upstream_fields_verified": [
+      "summary.merge_json",
+      "summary.output",
+      "summary.obj_out",
+      "summary.ref_surface",
+      "summary.strip_cols",
+      "summary.strip_count",
+      "summary.surfaces[].name",
+      "summary.surfaces[].path",
+      "summary.surfaces[].H",
+      "summary.surfaces[].W",
+      "summary.surfaces[].valid",
+      "summary.edges[].best_threshold",
+      "summary.edges[].best_score",
+      "summary.edges[].per_threshold",
+      "summary.edges[].anchor_count",
+      "summary.edges[].anchor_bin_size",
+      "summary.edges[].anchor_seed_side",
+      "summary.edges[].ransac_inliers",
+      "summary.edges[].ransac_total",
+      "summary.edges[].ransac_thresh",
+      "summary.edges[].ransac_sigma_in",
+      "summary.edges[].pair_scale",
+      "summary.edges[].real_overlap_A",
+      "summary.edges[].real_overlap_B",
+      "summary.joint_affine[]",
+      "summary.surface_rbf[]",
+      "summary.params"
+    ]
+  },
+  "anchor_count_summary": {
+    "max": 47534,
+    "median": 47534.0,
+    "min": 47534,
+    "total": 47534
+  },
+  "bucket_counts": {
+    "ready_for_bridge_qa": 1
+  },
+  "decision": "adapter_schema_ready_for_current_main_summary",
+  "edge_count": 1,
+  "edge_rows": [
+    {
+      "anchor_bin_size": 1,
+      "anchor_count": 47534,
+      "best_score": 0.847646,
+      "best_threshold": 4.0,
+      "edge_index": 0,
+      "failure_reasons": [],
+      "overlap_metadata_action": "none_scalar_only",
+      "pair_scale": 0.993395,
+      "pair_scale_delta": 0.006605,
+      "ransac_inlier_fraction": 0.705495,
+      "ransac_inliers": 33535,
+      "ransac_sigma_in": 1.005518,
+      "ransac_threshold": 10.0,
+      "ransac_total": 47534,
+      "real_overlap_min": 46894,
+      "review_bucket": "ready_for_bridge_qa",
+      "threshold_count": 4
+    }
+  ],
+  "failure_reason_counts": {},
+  "generated_at_utc": "2026-05-08T02:27:55+00:00",
+  "max_pair_scale_delta": 0.006605,
+  "metadata_write_action": "none_scalar_only",
+  "method": "vc3d_merge_summary_scalar_adapter",
+  "min_real_overlap": 46894,
+  "needs_upstream_merge_review_count": 0,
+  "non_claims": [
+    "no overlap metadata writing",
+    "no surface names or paths in adapter output",
+    "no coordinates or geometry payloads",
+    "no OBJ, tifxyz, or raster output",
+    "no predictions, ink, letters, or title",
+    "no automatic VC3D code mutation"
+  ],
+  "ready_for_bridge_qa_count": 1,
+  "recommended_next_steps": [
+    "Keep this adapter read-only and scalar-only inside the progress-prize package.",
+    "When a real current-main vc_merge_tifxyz summary is available, run this adapter and compare its review buckets to the existing multi-chart bridge-QA rows.",
+    "Only propose upstream code after a bounded current-main reproduction shows a concrete failure not covered by existing VC3D merge tooling."
+  ],
+  "source_public_context": "reports/2026-05-08_public_vc3d_merge_context_refresh.md",
+  "source_summary": "data/vc3d_merge_smoke/PHerc0139_overlap_r11_r12.volpkg/paths/pherc0139_a_merged/pherc0139_a_merged_summary.json",
+  "source_tool": "vc_merge_tifxyz",
+  "storage_policy": "Read vc_merge_tifxyz summary scalars only; do not carry surface names, paths, coordinates, OBJ paths, tifxyz outputs, meshes, overlap metadata, predictions, ink, letters, or titles into the adapter output.",
+  "strip_count": 2,
+  "surface_count": 2,
+  "surface_valid_count_summary": {
+    "max": 119447,
+    "median": 94218.5,
+    "min": 68990,
+    "total": 188437
+  },
+  "thresholds": {
+    "max_pair_scale_delta": 0.25,
+    "min_anchor_count": 3.0,
+    "min_ransac_inlier_fraction": 0.5,
+    "min_real_overlap": 200.0
+  },
+  "upstream_schema_reference": {
+    "checked_utc": "2026-05-08T01:51:43Z",
+    "commit": "c257b402fce35b5967fee752e415067a18d281c4",
+    "edge_json_lines": "711-718, 1911-1918",
+    "path": "volume-cartographer/apps/src/vc_merge_tifxyz.cpp",
+    "repository": "ScrollPrize/villa",
+    "summary_writer_lines": "2184-2220"
+  },
+  "worst_ransac_inlier_fraction": 0.705495
+}

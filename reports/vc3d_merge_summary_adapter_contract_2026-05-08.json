@@ -1,0 +1,207 @@
+{
+  "adapter_contract": {
+    "fields_not_copied": [
+      "surface names",
+      "surface paths",
+      "merge_json path",
+      "output directory",
+      "obj_out path",
+      "coordinates",
+      "meshes",
+      "tifxyz payloads"
+    ],
+    "input_fields_consumed": [
+      "surfaces[].valid",
+      "edges[].best_threshold",
+      "edges[].best_score",
+      "edges[].anchor_count",
+      "edges[].anchor_bin_size",
+      "edges[].ransac_inliers",
+      "edges[].ransac_total",
+      "edges[].ransac_thresh",
+      "edges[].ransac_sigma_in",
+      "edges[].pair_scale",
+      "edges[].real_overlap_A",
+      "edges[].real_overlap_B",
+      "strip_count"
+    ],
+    "input_source": "vc_merge_tifxyz summary.json",
+    "non_claims": [
+      "no overlap metadata writing",
+      "no surface names or paths in adapter output",
+      "no coordinates or geometry payloads",
+      "no OBJ, tifxyz, or raster output",
+      "no predictions, ink, letters, or title",
+      "no automatic VC3D code mutation"
+    ],
+    "output_fields": [
+      "edge_index",
+      "review_bucket",
+      "failure_reasons",
+      "anchor_count",
+      "ransac_inlier_fraction",
+      "pair_scale_delta",
+      "real_overlap_min",
+      "overlap_metadata_action"
+    ],
+    "upstream_fields_verified": [
+      "summary.merge_json",
+      "summary.output",
+      "summary.obj_out",
+      "summary.ref_surface",
+      "summary.strip_cols",
+      "summary.strip_count",
+      "summary.surfaces[].name",
+      "summary.surfaces[].path",
+      "summary.surfaces[].H",
+      "summary.surfaces[].W",
+      "summary.surfaces[].valid",
+      "summary.edges[].best_threshold",
+      "summary.edges[].best_score",
+      "summary.edges[].per_threshold",
+      "summary.edges[].anchor_count",
+      "summary.edges[].anchor_bin_size",
+      "summary.edges[].anchor_seed_side",
+      "summary.edges[].ransac_inliers",
+      "summary.edges[].ransac_total",
+      "summary.edges[].ransac_thresh",
+      "summary.edges[].ransac_sigma_in",
+      "summary.edges[].pair_scale",
+      "summary.edges[].real_overlap_A",
+      "summary.edges[].real_overlap_B",
+      "summary.joint_affine[]",
+      "summary.surface_rbf[]",
+      "summary.params"
+    ]
+  },
+  "anchor_count_summary": {
+    "max": 480,
+    "median": 120.0,
+    "min": 2,
+    "total": 602
+  },
+  "bucket_counts": {
+    "needs_upstream_merge_review": 2,
+    "ready_for_bridge_qa": 1
+  },
+  "decision": "adapter_schema_ready_for_current_main_summary",
+  "edge_count": 3,
+  "edge_rows": [
+    {
+      "anchor_bin_size": 1,
+      "anchor_count": 480,
+      "best_score": 0.82,
+      "best_threshold": 5.0,
+      "edge_index": 0,
+      "failure_reasons": [],
+      "overlap_metadata_action": "none_scalar_only",
+      "pair_scale": 1.02,
+      "pair_scale_delta": 0.02,
+      "ransac_inlier_fraction": 0.875,
+      "ransac_inliers": 420,
+      "ransac_sigma_in": 1.4,
+      "ransac_threshold": 6.0,
+      "ransac_total": 480,
+      "real_overlap_min": 1980,
+      "review_bucket": "ready_for_bridge_qa",
+      "threshold_count": 1
+    },
+    {
+      "anchor_bin_size": 1,
+      "anchor_count": 2,
+      "best_score": 0.12,
+      "best_threshold": 7.0,
+      "edge_index": 1,
+      "failure_reasons": [
+        "low_anchor_count",
+        "low_real_overlap"
+      ],
+      "overlap_metadata_action": "none_scalar_only",
+      "pair_scale": 1.05,
+      "pair_scale_delta": 0.05,
+      "ransac_inlier_fraction": 0.5,
+      "ransac_inliers": 1,
+      "ransac_sigma_in": 4.0,
+      "ransac_threshold": 8.0,
+      "ransac_total": 2,
+      "real_overlap_min": 55,
+      "review_bucket": "needs_upstream_merge_review",
+      "threshold_count": 1
+    },
+    {
+      "anchor_bin_size": 1,
+      "anchor_count": 120,
+      "best_score": 0.45,
+      "best_threshold": 6.0,
+      "edge_index": 2,
+      "failure_reasons": [
+        "low_ransac_inlier_fraction",
+        "pair_scale_outlier"
+      ],
+      "overlap_metadata_action": "none_scalar_only",
+      "pair_scale": 1.42,
+      "pair_scale_delta": 0.42,
+      "ransac_inlier_fraction": 0.166667,
+      "ransac_inliers": 20,
+      "ransac_sigma_in": 5.0,
+      "ransac_threshold": 8.0,
+      "ransac_total": 120,
+      "real_overlap_min": 340,
+      "review_bucket": "needs_upstream_merge_review",
+      "threshold_count": 1
+    }
+  ],
+  "failure_reason_counts": {
+    "low_anchor_count": 1,
+    "low_ransac_inlier_fraction": 1,
+    "low_real_overlap": 1,
+    "pair_scale_outlier": 1
+  },
+  "generated_at_utc": "2026-05-08T01:52:20+00:00",
+  "max_pair_scale_delta": 0.42,
+  "metadata_write_action": "none_scalar_only",
+  "method": "vc3d_merge_summary_scalar_adapter",
+  "min_real_overlap": 55,
+  "needs_upstream_merge_review_count": 2,
+  "non_claims": [
+    "no overlap metadata writing",
+    "no surface names or paths in adapter output",
+    "no coordinates or geometry payloads",
+    "no OBJ, tifxyz, or raster output",
+    "no predictions, ink, letters, or title",
+    "no automatic VC3D code mutation"
+  ],
+  "ready_for_bridge_qa_count": 1,
+  "recommended_next_steps": [
+    "Keep this adapter read-only and scalar-only inside the progress-prize package.",
+    "When a real current-main vc_merge_tifxyz summary is available, run this adapter and compare its review buckets to the existing multi-chart bridge-QA rows.",
+    "Only propose upstream code after a bounded current-main reproduction shows a concrete failure not covered by existing VC3D merge tooling."
+  ],
+  "source_public_context": "reports/2026-05-08_public_vc3d_merge_context_refresh.md",
+  "source_summary": "examples/vc_merge_tifxyz_summary_minimal.json",
+  "source_tool": "vc_merge_tifxyz",
+  "storage_policy": "Read vc_merge_tifxyz summary scalars only; do not carry surface names, paths, coordinates, OBJ paths, tifxyz outputs, meshes, overlap metadata, predictions, ink, letters, or titles into the adapter output.",
+  "strip_count": 1,
+  "surface_count": 4,
+  "surface_valid_count_summary": {
+    "max": 62000,
+    "median": 60000.0,
+    "min": 57000,
+    "total": 239000
+  },
+  "thresholds": {
+    "max_pair_scale_delta": 0.25,
+    "min_anchor_count": 3.0,
+    "min_ransac_inlier_fraction": 0.5,
+    "min_real_overlap": 200.0
+  },
+  "upstream_schema_reference": {
+    "checked_utc": "2026-05-08T01:51:43Z",
+    "commit": "c257b402fce35b5967fee752e415067a18d281c4",
+    "edge_json_lines": "711-718, 1911-1918",
+    "path": "volume-cartographer/apps/src/vc_merge_tifxyz.cpp",
+    "repository": "ScrollPrize/villa",
+    "summary_writer_lines": "2184-2220"
+  },
+  "worst_ransac_inlier_fraction": 0.166667
+}

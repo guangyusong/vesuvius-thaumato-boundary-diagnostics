@@ -1,0 +1,119 @@
+{
+  "merge_json": "synthetic/volpkg/merge.json",
+  "obj_out": "synthetic/volpkg/paths/surface_a_merged.obj",
+  "output": "synthetic/volpkg/paths/surface_a_merged",
+  "params": {
+    "anchor_cap": 1000,
+    "consensus_c": 6.0,
+    "consensus_min_active": 3,
+    "idw_k": 4,
+    "ransac_iters": 3000,
+    "step_size": 20
+  },
+  "ref_surface": "surface_a",
+  "strip_count": 1,
+  "strip_cols": 0,
+  "surface_rbf": [
+    {
+      "n_anchors": 500,
+      "resid_max": 4.2,
+      "resid_rms": 1.1,
+      "surface": "surface_a"
+    }
+  ],
+  "surfaces": [
+    {
+      "H": 256,
+      "W": 256,
+      "name": "surface_a",
+      "path": "synthetic/volpkg/paths/surface_a",
+      "valid": 62000
+    },
+    {
+      "H": 256,
+      "W": 256,
+      "name": "surface_b",
+      "path": "synthetic/volpkg/paths/surface_b",
+      "valid": 61000
+    },
+    {
+      "H": 256,
+      "W": 256,
+      "name": "surface_c",
+      "path": "synthetic/volpkg/paths/surface_c",
+      "valid": 59000
+    },
+    {
+      "H": 256,
+      "W": 256,
+      "name": "surface_d",
+      "path": "synthetic/volpkg/paths/surface_d",
+      "valid": 57000
+    }
+  ],
+  "edges": [
+    {
+      "a": "surface_a",
+      "anchor_bin_size": 1,
+      "anchor_count": 480,
+      "anchor_seed_side": "A",
+      "b": "surface_b",
+      "best_score": 0.82,
+      "best_threshold": 5.0,
+      "pair_scale": 1.02,
+      "per_threshold": [
+        {
+          "threshold": 5.0
+        }
+      ],
+      "ransac_inliers": 420,
+      "ransac_sigma_in": 1.4,
+      "ransac_thresh": 6.0,
+      "ransac_total": 480,
+      "real_overlap_A": 2100,
+      "real_overlap_B": 1980
+    },
+    {
+      "a": "surface_b",
+      "anchor_bin_size": 1,
+      "anchor_count": 2,
+      "anchor_seed_side": "A",
+      "b": "surface_c",
+      "best_score": 0.12,
+      "best_threshold": 7.0,
+      "pair_scale": 1.05,
+      "per_threshold": [
+        {
+          "threshold": 7.0
+        }
+      ],
+      "ransac_inliers": 1,
+      "ransac_sigma_in": 4.0,
+      "ransac_thresh": 8.0,
+      "ransac_total": 2,
+      "real_overlap_A": 60,
+      "real_overlap_B": 55
+    },
+    {
+      "a": "surface_c",
+      "anchor_bin_size": 1,
+      "anchor_count": 120,
+      "anchor_seed_side": "B",
+      "b": "surface_d",
+      "best_score": 0.45,
+      "best_threshold": 6.0,
+      "pair_scale": 1.42,
+      "per_threshold": [
+        {
+          "threshold": 6.0
+        }
+      ],
+      "ransac_inliers": 20,
+      "ransac_sigma_in": 5.0,
+      "ransac_thresh": 8.0,
+      "ransac_total": 120,
+      "real_overlap_A": 340,
+      "real_overlap_B": 360
+    }
+  ]
+}

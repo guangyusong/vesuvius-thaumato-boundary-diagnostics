@@ -1,0 +1,104 @@
+{
+  "decision": "package_multi_chart_bridge_representation_defer_route_substitution",
+  "evidence_read": "3 multi-chart direct-global blocker positives, 2 specificity control, 139 target-connecting route-substitution paths, and 0 cap-compliant route paths.",
+  "generated_at_utc": "2026-05-08T01:08:17+00:00",
+  "metadata_write_action": "none_scalar_only",
+  "method": "pherc1667_multi_chart_method_decision",
+  "multi_chart_positive_blocker_count": 3,
+  "multi_chart_positive_rows": [
+    {
+      "case": "pherc1667_13_4_3_recto_seed1",
+      "direct_global_cap_compliant": false,
+      "direct_global_p90": 0.230291,
+      "multi_chart_bridge_aware_p90": 0.005552,
+      "multi_chart_bridge_count": 6,
+      "multi_chart_cap_compliant": true,
+      "multi_chart_integration_action": "quality_gate_pass_review_candidate",
+      "multi_chart_unplaced_bridge_count": 0
+    },
+    {
+      "case": "pherc1667_13_4_4_verso_seed0",
+      "direct_global_cap_compliant": false,
+      "direct_global_p90": 0.506859,
+      "multi_chart_bridge_aware_p90": 0.01078,
+      "multi_chart_bridge_count": 2,
+      "multi_chart_cap_compliant": true,
+      "multi_chart_integration_action": "quality_gate_pass_review_candidate",
+      "multi_chart_unplaced_bridge_count": 0
+    },
+    {
+      "case": "pherc1667_14_4_4_verso_seed0",
+      "direct_global_cap_compliant": false,
+      "direct_global_p90": 0.300417,
+      "multi_chart_bridge_aware_p90": 0.039103,
+      "multi_chart_bridge_count": 3,
+      "multi_chart_cap_compliant": true,
+      "multi_chart_integration_action": "quality_gate_pass_review_candidate",
+      "multi_chart_unplaced_bridge_count": 0
+    }
+  ],
+  "multi_chart_specificity_control_count": 2,
+  "non_claims": [
+    "not an unwrap",
+    "not text, ink, letters, or title",
+    "not an overlapping.json writer",
+    "not a route-substitution recovery claim",
+    "not a VC3D metadata mutation"
+  ],
+  "recommended_next_steps": [
+    "Package the multi-chart bridge representation as the reviewer-facing method decision.",
+    "Keep route substitution as bounded failure analysis unless a future representation lowers the strict p90 gap.",
+    "If continuing technically, add one current-public-repo adapter dry-run or one additional specificity control before proposing code changes."
+  ],
+  "route_substitution_cap_path_count": 0,
+  "route_substitution_case_count": 2,
+  "route_substitution_rows": [
+    {
+      "best_p90_cap_gap": 0.032185,
+      "cap_compliant_target_path_count": 0,
+      "case": "pherc1667_13_4_3_recto_seed1",
+      "classification": "route_substitution_negative",
+      "target_connecting_path_count": 91,
+      "target_path_p90_min": 0.232185
+    },
+    {
+      "best_p90_cap_gap": 0.101094,
+      "cap_compliant_target_path_count": 0,
+      "case": "pherc1667_14_4_4_verso_seed0",
+      "classification": "route_substitution_negative",
+      "target_connecting_path_count": 48,
+      "target_path_p90_min": 0.301094
+    }
+  ],
+  "route_substitution_target_path_count": 139,
+  "shared_case_rows": [
+    {
+      "case": "pherc1667_13_4_3_recto_seed1",
+      "direct_global_p90": 0.230291,
+      "method_read": "multi_chart_bridge_representation_positive_route_substitution_negative",
+      "multi_chart_bridge_aware_p90": 0.005552,
+      "multi_chart_cap_compliant": true,
+      "route_best_p90_cap_gap": 0.032185,
+      "route_best_target_path_p90": 0.232185,
+      "route_cap_compliant_target_path_count": 0,
+      "route_target_connecting_path_count": 91
+    },
+    {
+      "case": "pherc1667_14_4_4_verso_seed0",
+      "direct_global_p90": 0.300417,
+      "method_read": "multi_chart_bridge_representation_positive_route_substitution_negative",
+      "multi_chart_bridge_aware_p90": 0.039103,
+      "multi_chart_cap_compliant": true,
+      "route_best_p90_cap_gap": 0.101094,
+      "route_best_target_path_p90": 0.301094,
+      "route_cap_compliant_target_path_count": 0,
+      "route_target_connecting_path_count": 48
+    }
+  ],
+  "shared_positive_route_negative_count": 2,
+  "source_reports": [
+    "reports/thaumato_vc3d_multi_chart_adapter_contract_2026-05-08.json",
+    "reports/thaumato_pherc1667_route_substitution_audit_2026-05-08.json"
+  ],
+  "storage_policy": "Read saved scalar JSON only; no raw chunks, endpoints, path signatures, patch identifiers, component identifiers, coordinates, meshes, predictions, ink, letters, or titles."
+}

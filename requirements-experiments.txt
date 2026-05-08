@@ -1,0 +1,5 @@
+numpy>=1.26
+pillow>=9.0
+hdbscan>=0.8.42
+scikit-learn>=1.7
+scipy>=1.15
